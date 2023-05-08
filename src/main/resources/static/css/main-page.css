@@ -1,0 +1,33 @@
+.single-item-container {
+    display: flex;
+    background: lightgray;
+}
+
+.single-item-check-box {
+    margin-left: 20px;
+}
+
+.single-item-id {
+    margin-left: 20px;
+}
+
+.menu-descriptions {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    justify-content: space-between;
+    /* flex-grow: 1; */
+}
+
+.single-description-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}
+
+.drop-down-menus {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
