@@ -1,6 +1,7 @@
 .single-item-container {
     display: flex;
     background: lightgray;
+    margin-bottom: 20px;
 }
 
 .single-item-check-box {

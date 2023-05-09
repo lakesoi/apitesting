@@ -5,45 +5,36 @@
 
 <h1>Common Header</h1>
 
-
 <h1>API Testing</h1>
-<section class="single-item-container">
-    <section class="single-item-check-box">
-        <input type="checkbox" class="api-item-check-box" value="item-selected">
+{{#apidatas}}
+    <section class="single-item-container">
+        <section class="single-item-check-box">
+            <input type="checkbox" class="api-item-check-box" value="item-selected">
+        </section>
+        <section class="single-item-id">
+            <a href="/" class="text-primary font-weight-bold">{{id}}</a>
+        </section>
+        <section class="menu-descriptions">
+            <div class="single-description-wrapper">
+                <span class="text-primary font-weight-bold">Type</span>
+            </div>
+            <div class="single-description-wrapper">
+                <span class="text-primary font-weight-bold">URL</span>
+            </div>
+            <div class="single-description-wrapper">
+                <span class="text-primary font-weight-bold">DataType</span>
+            </div>
+            <div class="single-description-wrapper">
+                <span class="text-primary font-weight-bold">ContentType</span>
+            </div>
+        </section>
+        <section class="drop-down-menus">
+            <input class="form-control" type="text" value="{{type}}">
+            <input class="form-control" type="text" value="{{url}}">
+            <input class="form-control" type="text" value="{{dataType}}">
+            <input class="form-control" type="text" value="{{contentType}}">
+        </section>
     </section>
-    <section class="single-item-id">
-        <a href="/" class="text-primary font-weight-bold">ID</a>
-    </section>
-    <section class="menu-descriptions">
-        <div class="single-description-wrapper">
-            <span class="text-primary font-weight-bold">Type</span>
-        </div>
-        <div class="single-description-wrapper">
-            <span class="text-primary font-weight-bold">URL</span>
-        </div>
-        <div class="single-description-wrapper">
-            <span class="text-primary font-weight-bold">DataType</span>
-        </div>
-        <div class="single-description-wrapper">
-            <span class="text-primary font-weight-bold">ContentType</span>
-        </div>
-    </section>
-    <section class="drop-down-menus">
-        <select class="form-control" value="http-type">
-            <option value="POST">POST</option>
-            <option value="GET">GET</option>
-            <option value="PUT">PUT</option>
-            <option value="DELETE">DELETE</option>
-        </select>
-        <input class="form-control" type="text"/>
-        <select class="form-control">
-            <option value="json">json</option>
-        </select>
-        <select class="form-control">
-            <option value="application/json; charset=8">application/json; charset=8</option>
-        </select>
-    </section>
-</section>
-
+{{/apidatas}}
 
 {{>layout/footer}}

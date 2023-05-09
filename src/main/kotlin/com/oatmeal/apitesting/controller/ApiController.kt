@@ -1,6 +1,8 @@
 package com.oatmeal.apitesting.controller
 
+import com.oatmeal.apitesting.service.dto.ApiDataDto
 import lombok.RequiredArgsConstructor
+import org.hibernate.internal.util.collections.CollectionHelper.listOf
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
@@ -10,7 +12,11 @@ import org.springframework.web.bind.annotation.GetMapping
 class ApiController {
     @GetMapping("/")
     fun showMainPagePage(model: Model): String {
-        model.addAttribute("apis", "ffff")
+        var testList: List<ApiDataDto> = listOf(
+            ApiDataDto("1", "POST", "http://ucs.dev", "json", "JSON"),
+            ApiDataDto("2", "PUT", "http://ucs.dev", "json", "JSON"),
+        )
+        model.addAttribute("apidatas", testList)
         return "main-page"
     }
 }
