@@ -7,24 +7,24 @@
 
 <h1>API Testing</h1>
 {{#apidatas}}
-    <section class="single-item-container">
+    <section class="single-item-container horizontal-rule">
         <section class="single-item-check-box">
             <input type="checkbox" class="api-item-check-box" value="item-selected">
         </section>
         <section class="single-item-id">
             <a href="/" class="text-primary font-weight-bold">{{id}}</a>
         </section>
-        <section class="menu-descriptions">
-            <div class="single-description-wrapper">
+        <section class="menu-descriptions-space-between">
+            <div class="single-description-wrapper-align-end">
                 <span class="text-primary font-weight-bold">Type</span>
             </div>
-            <div class="single-description-wrapper">
+            <div class="single-description-wrapper-align-end">
                 <span class="text-primary font-weight-bold">URL</span>
             </div>
-            <div class="single-description-wrapper">
+            <div class="single-description-wrapper-align-end">
                 <span class="text-primary font-weight-bold">DataType</span>
             </div>
-            <div class="single-description-wrapper">
+            <div class="single-description-wrapper-align-end">
                 <span class="text-primary font-weight-bold">ContentType</span>
             </div>
         </section>
@@ -34,7 +34,33 @@
             <input class="form-control" type="text" value="{{dataType}}">
             <input class="form-control" type="text" value="{{contentType}}">
         </section>
+        <section class="left-margin">
+            <span class="text-primary font-weight-bold">Body</span>
+        </section>
+        <section class="left-margin col-md-2">
+            <textarea class="form-control rounded" style="height: 100%;"></textarea>
+        </section>
+
+        <section class="left-margin">
+            <span class="text-primary font-weight-bold">Expected</span>
+        </section>
+        <section class="left-margin col-md-2">
+            <textarea class="form-control rounded" style="height: 100%;"></textarea>
+        </section>
+        <section class="left-margin">
+            <span class="text-primary font-weight-bold">Response</span>
+        </section>
+        <section class="left-margin col-md-2">
+            <textarea class="form-control rounded" style="height: 100%;"></textarea>
+        </section>
+        <section class="menu-descriptions">
+            <input type="button" class="btn btn-primary" style="width: 100%;" value="FIRE">
+            <input type="button" class="btn btn-primary" value="DELETE">
+        </section>
     </section>
 {{/apidatas}}
-
+<section class="global-button-container">
+    <input type="button" class="btn btn-primary left-margin" value="ADD">
+    <input type="button" class="btn btn-primary left-margin margin-right" value="TEST">
+</section>
 {{>layout/footer}}

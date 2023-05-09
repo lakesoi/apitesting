@@ -1,7 +1,5 @@
 .single-item-container {
     display: flex;
-    background: lightgray;
-    margin-bottom: 20px;
 }
 
 .single-item-check-box {
@@ -12,7 +10,7 @@
     margin-left: 20px;
 }
 
-.menu-descriptions {
+.menu-descriptions-space-between {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
@@ -20,7 +18,21 @@
     /* flex-grow: 1; */
 }
 
+.menu-descriptions {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    justify-content: space-around;
+    /* flex-grow: 1; */
+}
+
 .single-description-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.single-description-wrapper-align-end {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -31,4 +43,23 @@
     display: flex;
     flex-direction: column;
     margin-left: 20px;
+}
+
+.left-margin {
+    margin-left: 20px;
+}
+
+.margin-right {
+    margin-right: 20px;
+}
+
+.global-button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.horizontal-rule {
+  border-bottom: 1px solid gray;
+  width: 100%;
+  margin: 20px 0;
 }
