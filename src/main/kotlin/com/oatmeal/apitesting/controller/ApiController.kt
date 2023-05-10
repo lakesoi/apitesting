@@ -13,7 +13,7 @@ class ApiController {
     @GetMapping("/")
     fun showMainPagePage(model: Model): String {
         var testList: List<ApiDataDto> = listOf(
-            ApiDataDto("1", "POST", "http://ucs.dev", "json", "JSON"),
+            ApiDataDto("1", "GET", "https://jsonplaceholder.typicode.com/posts", "json", "JSON"),
             ApiDataDto("2", "PUT", "http://ucs.dev", "json", "JSON"),
         )
         model.addAttribute("apidatas", testList)

@@ -7,7 +7,7 @@
 
 <h1>API Testing</h1>
 {{#apidatas}}
-    <section class="single-item-container horizontal-rule">
+    <section id="section{{id}}" class="single-item-container horizontal-rule">
         <section class="single-item-check-box">
             <input type="checkbox" class="api-item-check-box" value="item-selected">
         </section>
@@ -54,13 +54,13 @@
             <textarea class="form-control rounded" style="height: 100%;"></textarea>
         </section>
         <section class="menu-descriptions">
-            <input type="button" class="btn btn-primary" style="width: 100%;" value="FIRE">
+            <input onClick ="fire('{{id}}', '{{type}}', '{{url}}', '{{dataType}}', '{{contentType}}')" type="button" class="fire-btn btn btn-primary" style="width: 100%;" value="FIRE">
             <input type="button" class="btn btn-primary" value="DELETE">
         </section>
     </section>
 {{/apidatas}}
 <section class="global-button-container">
-    <input type="button" class="btn btn-primary left-margin" value="ADD">
+    <a href="/apitesting/add" role="button" class="btn btn-primary left-margin">ADD</a>
     <input type="button" class="btn btn-primary left-margin margin-right" value="TEST">
 </section>
 {{>layout/footer}}
